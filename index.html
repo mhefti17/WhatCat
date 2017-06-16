@@ -1,0 +1,57 @@
+<html>
+
+<head>
+  <title>Which cat are you?</title>
+  <link rel="stylesheet" href="public/css/styles.css">
+</head>
+
+<body>
+
+<h1 class="main-header">Which cat are you?</h1>
+<div id="kitty-container">
+  <div class="selfie-wrapper">
+    <div id="selfie" style='position:relative;'>
+      <span style='left:0%;right:0%;bottom:0%;position:absolute;background:#EAFFFC;padding:5px;text-align:center;'>Click to use your webcam</span>
+      <img id='placeholder' src="public/images/mystery.png" alt="selfie placeholder">
+      <div id='webcam'></div>
+    </div>
+    <div class="yourEmotion">
+    </div>
+  </div>
+  <div class="kitty-wrapper">
+    <div id="catResult">
+      <div class="breedImg">
+        <img src="public/images/mystery.png" alt="cat placeholder">
+      </div>
+      <div class="breedName">
+      </div>
+      <div class="breedDesc">
+      </div>
+    </div>
+  </div>
+  <div class="form-wrapper">
+    <div class="step-one shown">
+      <form action="javascript:submitUrl();">
+        <div>
+          <input id="submitButton" type="submit" value="Meow">
+        </div>
+      </form>
+      <div class="form-error"></div>
+    </div>
+    <div class="step-two hidden">
+      <form action="javascript:startOver();">
+        <div>
+          <input id="redoButton" type="submit" value="Another?">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+  <script src="public/js/meow.js"></script>
+</body>
+
+</html>
